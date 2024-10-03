@@ -1,0 +1,243 @@
+/* 전체 레이아웃 설정 */
+.FindtoID {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+.FindtoID .FindtoID-2 {
+  background-color: #ffffff;
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  padding: 20px;
+}
+
+
+/* 그룹 및 컨테이너 설정 */
+.FindtoID .FindtoID-groupbox,
+.FindtoID .group-6 {
+  height: 400px;
+  position: relative;
+}
+
+.FindtoID .FindtoID-selected {
+  height: 400px;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.FindtoID .FindtoID-container {
+  background-color: #ffffff;
+  border: 1px solid white;
+  height: 270px;;
+  left: -1px;
+  position: relative;
+  top: -1px;
+  width: 550px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 버튼 이미지 설정 */
+.FindtoID .select-btn-id,
+.FindtoID .select-btn-pass {
+  height: 47px;
+  position: absolute;
+  top: 25px;
+  width: 155px;
+}
+
+.FindtoID .select-btn-id {
+  left: 7px;
+}
+
+.FindtoID .select-btn-pass {
+  left: 142px;
+}
+
+
+/* 버튼 텍스트 스타일 */
+.FindtoID .select-btn-id-text,
+.FindtoID .select-btn-pass-text {
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 25px;
+  white-space: nowrap;
+}
+.FindtoID .select-btn-id-text {
+  left: 68px;
+}
+
+.FindtoID .select-btn-pass-text {
+  left: 181.5px;
+}
+
+
+/* 선택된 버튼 텍스트 스타일 */
+.selected-text {
+  color: #000000;
+}
+
+.deselected-text {
+  color: #757575;
+}
+
+
+/* 인증 박스 설정 */
+.FindtoID .authentication-box-email {
+  background-color: #e0e0e063;
+  height: 80px;
+  left: 27px;
+  position: absolute;
+  width: 483px;
+}
+
+.FindtoID .authentication-box-email {
+  top: 135px;
+}
+
+
+/* 인증 박스 내부 텍스트 그룹 설정 */
+.FindtoID .authentication-box-email-group1 {
+  position: absolute;
+  left: 117px;
+  width: 136px;
+}
+
+.FindtoID .authentication-box-email-group1 {
+  top: 141px;
+  height: 50px;
+}
+
+.FindtoID .authentication-box-email-group2 {
+  position: relative;
+  width: 132px;
+}
+
+.FindtoID .authentication-box-email-group2 {
+  height: 50px;
+}
+
+
+/* 인증 박스 제목 텍스트 */
+.FindtoID .authentication-box-text {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 132px;
+}
+
+.FindtoID .authentication-box-email-text {
+  color: #757575;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  position: absolute;
+  left: 0;
+  line-height: 44px;
+  white-space: nowrap;
+}
+
+.FindtoID .authentication-box-email-text {
+  left: 0;
+  letter-spacing: 0;
+  position: absolute;
+  top: 16px;
+  width: 132px;
+}
+
+
+/* 인증 버튼 설정 */
+.FindtoID .authentication-btn-email {
+  left: 407px;
+  background-color: #000000;
+  height: 38px;
+  position: absolute;
+  width: 89px;
+  cursor: pointer;
+}
+
+.FindtoID .authentication-btn-email {
+  top: 154px;
+}
+
+
+/* 인증 버튼 텍스트 */
+.FindtoID .authentication-btn-email-text {
+  color: #ffffff;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: 44px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.FindtoID .authentication-btn-email-text {
+  left: 426px;
+  top: 150px;
+  width: 66px;
+}
+
+
+/* 이미지 및 추가 텍스트 */
+.FindtoID .authentication-btn-email-maskImg {
+  position: absolute;
+}
+
+.FindtoID .authentication-btn-email-maskImg {
+  background-image: url(../../assets/Find/mask-group-1.png);
+  background-size: 100% 100%;
+  height: 43px;
+  left: 44px;
+  top: 152px;
+  width: 43px;
+}
+
+.FindtoID .p {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 27px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 83px;
+  white-space: nowrap;
+  width: 327px;
+}
+
+.FindtoID .line {
+  height: 1px;
+  left: 276px;
+  position: absolute;
+  top: 68px;
+  width: 176px;
+}
+
+
+/* 앵커 a 스타일 */
+a {
+  color: white;
+  text-decoration: none;
+}

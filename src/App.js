@@ -9,6 +9,7 @@ import Findtoidhome from './components/Find/FindtoID.js'
 import FindtoPass from './components/Find/FindPasswordform.js';
 import IDresult from './components/Find/FindIDresult.js'
 import NewPass from './components/Find/FindPassword-newpassword.js'
+import TermsPage from './components/Register/registerpage4.js'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/Find/Password" element={<FindtoPass />} />
           <Route path="/Find/Password/result" element={<NewPass />} />
           <Route path="/Find/Password/result/id" element={<IDresult />} />
+          <Route path="/register/Terms" element={<TermsPage />} />
         </Routes>
       </div>
     </Router>

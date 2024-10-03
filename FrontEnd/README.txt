@@ -15,3 +15,5 @@
 
 2-2-3. Findpasswordform.js - 비밀번호 찾기 시 아이디 입력 페이지
 > 해당 css file : FindPasswordfoemstyle.css
+
+2-2-4. TermsPage - 약관동의 페이지

@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:500,700,900|Azeret+Mono:700,600");
+
+:root {
+  --alabaster: #fafafa;
+  --black: #000000;
+  --blueberry: #5669ff;
+  --blueberry-2: #5669ff26;
+  --electric-violet: #9800ff;
+  --licorice: #151515;
+  --magnolia: #f8efff;
+  --royal-blue: #4156ff;
+  --white: #ffffff;
+  --white-pointer: #fcfbff;
+
+  --font-size-l: 32px;
+  --font-size-m: 24px;
+  --font-size-s: 20px;
+  --font-size-xl: 35px;
+  --font-size-xxl: 50px;
+  --font-size-xxxl: 80px;
+  --font-size-xxxxl: 100.8px;
+
+  --font-family-azeret_mono: "Azeret Mono", Helvetica;
+  --font-family-noto_sans_kr: "Noto Sans KR", Helvetica, monospace;
+}
+.notosanskr-bold-white-100-8px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.azeretmono-bold-licorice-80px {
+  color: var(--licorice);
+  font-family: var(--font-family-azeret_mono);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.azeretmono-bold-black-80px {
+  color: var(--black);
+  font-family: var(--font-family-azeret_mono);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.azeretmono-semi-bold-black-32px {
+  color: var(--black);
+  font-family: var(--font-family-azeret_mono);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.notosanskr-bold-blueberry-35px {
+  color: var(--blueberry);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.notosanskr-medium-black-24px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.notosanskr-bold-black-50px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.notosanskr-bold-white-80px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.notosanskr-medium-white-24px {
+  color: var(--white);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.notosanskr-medium-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.notosanskr-black-black-30px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 900;
+}

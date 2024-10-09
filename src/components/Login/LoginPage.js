@@ -142,7 +142,7 @@ function LoginPage() {
   return (
     <div className="login-page">
       <div className="container-center-horizontal">
-        <div className="loginpage-u40u4361u4462u4364u4453u4540u41 screen">
+        <div className="loginpage-u40u4361u4462u4364u4453u4540u41 loginpage">
           <div className="logo_-titlle">
             Explore<br />HOBBY
           </div>

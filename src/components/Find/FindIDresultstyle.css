@@ -458,3 +458,7 @@ a:active {
 .FindIDresult .linkbtn2 {
   color: #958f8f;
 }
+
+.FindIDresult img {
+  padding-left: 20px;
+}

@@ -11,7 +11,7 @@ const TermsPage = () => {
 
   // 페이지를 나가는 함수
   const handleClose = () => {
-    window.location.href = "/"; // 페이지 나가기 버튼을 클릭 시 페이지이동
+    window.location.href = "/mainHome"; // 페이지 나가기 버튼을 클릭 시 페이지이동
   };
 
   return (

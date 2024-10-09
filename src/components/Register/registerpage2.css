@@ -558,7 +558,7 @@ a {
 }
 
 /* 이미지 기본 여백 패딩값 */
-img {
+.SignupPage img {
   padding-left: 20px;
 }
 

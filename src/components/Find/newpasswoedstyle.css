@@ -222,6 +222,10 @@
   width: 176px;
 }
 
+.NewPasswordPage img {
+  padding-left: 20px;
+}
+
 
 /* 에러 메시지 */
 .error-message {

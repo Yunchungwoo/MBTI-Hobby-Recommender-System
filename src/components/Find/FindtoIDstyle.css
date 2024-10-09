@@ -241,3 +241,7 @@ a {
   color: white;
   text-decoration: none;
 }
+
+.FindtoID img {
+  padding-left: 20px;
+}

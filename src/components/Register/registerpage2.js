@@ -27,7 +27,7 @@ function RegisterPage2() {
 
       console.log('회원가입 성공:', response.data);
       // 성공 시 다음 페이지로 이동
-      navigate('/Terms'); // 페이지 경로는 원하는 경로로 변경
+      navigate('/register/Terms'); // 페이지 경로는 원하는 경로로 변경
     } catch (error) {
       // 에러 처리
       if (error.response) {

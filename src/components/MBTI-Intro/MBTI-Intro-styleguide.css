@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,200,300,400,500,600,700,800,900|Azeret+Mono:700,600");
+
+:root {
+  --black: #000000;
+  --blueberry: #5669ff;
+  --blueberry-2: #5669ff26;
+  --electric-violet: #9800ff;
+  --magnolia: #f8efff;
+  --white: #ffffff;
+  --gray: #333;
+
+  --font-family-azeret_mono: "Azeret Mono", Helvetica;
+  --font-family-noto_sans_kr: "Noto Sans KR", Helvetica, monospace;
+}
+
+.notosanskr-medium-bold-20px {
+  color: var(--gray);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.notosanskr-bold-black-50px {
+  color: var(--gray);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.notosanskr-medium-black-20px {
+  color: var(--gray);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.notosanskr-black-black-30px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.notosanskr-medium-black-16px {
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: 16px;
+  font-style: normal;
+}

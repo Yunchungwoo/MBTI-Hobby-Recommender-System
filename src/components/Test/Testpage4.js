@@ -42,7 +42,7 @@ const TestPage4 = () => {
     });
 
     // 현재 질문에 따라 다음 질문으로 이동
-    const questionNumber = parseInt(e.target.name.slice(1)); // Get the question number (e.g., 'q1' -> 1)
+    const questionNumber = parseInt(e.target.name.slice(1));
     if (questionNumber < 10) {
       setCurrentQuestion(questionNumber + 1);
     }
@@ -227,7 +227,7 @@ const TestPage4 = () => {
                       <input
                         type="radio"
                         name={`q${questionNum}`}
-                        value="매우 그렇다"
+                        value="아주 그렇다"
                         onChange={handleChange}
                         className="radio-button"
                       />

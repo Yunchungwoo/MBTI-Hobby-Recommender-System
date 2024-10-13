@@ -225,7 +225,7 @@ const TestPage3 = () => {
                       <input
                         type="radio"
                         name={`q${questionNum}`}
-                        value="매우 그렇다"
+                        value="아주 그렇다"
                         onChange={handleChange}
                         className="radio-button"
                       />

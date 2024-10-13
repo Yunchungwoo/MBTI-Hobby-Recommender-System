@@ -126,7 +126,6 @@ body {
   font-size: 16px;
   border: none;
   cursor: pointer; /* 마우스 포인터 표시 */
-
   font-family: "Noto Sans KR", Arial, sans-serif;
 }
 
@@ -323,7 +322,7 @@ li {
 }
 
 /* 차트 포지션 정렬 */
-.chart {
+.screenmbti .chart {
   display: flex;
   flex-direction: column;
   align-items: center;

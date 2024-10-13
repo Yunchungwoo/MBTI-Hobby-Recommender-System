@@ -7,6 +7,9 @@ import bannerimg from "../../assets/result/ENFJ.svg";
 
 const ResultPage = () => {
   const [isModalVisible, setModalVisible] = useState(false);
+// persent 와 score 설정
+//   const [percentages, setPercentages] = useState({});
+//   const [scores, setScores] = useState({});
 
   const handleMouseEnter = () => {
     setModalVisible(true);
@@ -15,6 +18,21 @@ const ResultPage = () => {
   const handleMouseLeave = () => {
     setModalVisible(false);
   };
+
+  //django 데이터 받아오는 함수 설정(임시)
+//   useEffect(() => {
+//     fetch('/api/enter to django link/')  // Django API 엔드포인트
+//       .then(response => response.json())
+//       .then(data => {
+//         setPercentages(data.percentages);
+//         setScores(data.scores);
+//       });
+//   }, []);
+
+  // 각 지표별로 외향/내향 등 텍스트 설정 함수
+//   const getDominantTrait = (score1, score2, trait1, trait2) => {
+//     return score1 > score2 ? trait1 : trait2;
+//   };
 
   return (
     <div className="result container-center-horizontal">
@@ -202,14 +220,7 @@ const ResultPage = () => {
             <div className="result-chart-container">
               <div className="chart-group">
                 <svg viewBox="0 0 200 200" width="280px" height="280px">
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="90"
-                    fill="none"
-                    stroke="#ebebeb"
-                    strokeWidth="12"
-                  />
+                  <circle cx="100" cy="100" r="90" fill="none" stroke="#ebebeb" strokeWidth="12" />
                   <circle
                     cx="100"
                     cy="100"
@@ -217,36 +228,21 @@ const ResultPage = () => {
                     fill="none"
                     stroke="#4257FF"
                     strokeWidth="12"
-                    strokeDasharray={2 * Math.PI * 90 * 0.5}
+                    strokeDasharray={2 * Math.PI * 90 * 0.5}    //백분율 적용 데이터 값 퍼센트 표시
                     strokeDashoffset={-2 * Math.PI * 90 * 0.25}
                   />
-                  <text
-                    x="60"
-                    y="105"
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fontSize="45"
-                    fill="black"
-                    fontFamily="Azeret Mono"
-                  >
-                    E
-                  </text>
-                  <text
-                    x="140"
-                    y="105"
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fontSize="45"
-                    fill="black"
-                    fontFamily="Azeret Mono"
-                  >
-                    I
-                  </text>
+                  <text x="60" y="105" textAnchor="middle" dominantBaseline="middle" fontSize="45" fill="black" fontFamily="Azeret Mono" >E</text>
+                  <text x="140" y="105" textAnchor="middle" dominantBaseline="middle" fontSize="45" fill="black" fontFamily="Azeret Mono" >I</text>
                 </svg>
+
+                {/* 데이터로부터 받아오는 점수값 중 E/I 비교하여 높은 점수 쪽에 매칭되는 텍스트 설정 */}
                 <div className="chart-label-container">
-                  <div className="chart-label-1">외향적</div>
+                  <div className="chart-label-1">
+                    {/* {getDominantTrait(scores['E'], scores['I'], "외향적", "내향적")} */}
+                  </div>
+                {/* 퍼센테이지 설정 */}
                   <div className="chart-label" style={{ color: "#4257FF" }}>
-                    %
+                  {/* {percentages['E_I']}% */}
                   </div>
                 </div>
               </div>
@@ -254,14 +250,7 @@ const ResultPage = () => {
               <div className="chart-group">
                 {/* S/N */}
                 <svg viewBox="0 0 200 200" width="280px" height="280px">
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="90"
-                    fill="none"
-                    stroke="#ebebeb"
-                    strokeWidth="12"
-                  />
+                  <circle cx="100" cy="100" r="90" fill="none" stroke="#ebebeb" strokeWidth="12" />
                   <circle
                     cx="100"
                     cy="100"
@@ -269,36 +258,21 @@ const ResultPage = () => {
                     fill="none"
                     stroke="#317287"
                     strokeWidth="12"
-                    strokeDasharray={2 * Math.PI * 90 * 0.5}
+                    strokeDasharray={2 * Math.PI * 90 * 0.5}    //백분율 적용 데이터 값 퍼센트 표시
                     strokeDashoffset={2 * Math.PI * 90 * 0.25}
                   />
-                  <text
-                    x="60"
-                    y="105"
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fontSize="45"
-                    fill="black"
-                    fontFamily="Azeret Mono"
-                  >
-                    S
-                  </text>
-                  <text
-                    x="140"
-                    y="105"
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fontSize="45"
-                    fill="black"
-                    fontFamily="Azeret Mono"
-                  >
-                    N
-                  </text>
+                  <text x="60" y="105" textAnchor="middle" dominantBaseline="middle" fontSize="45" fill="black" fontFamily="Azeret Mono" >S</text>
+                  <text x="140" y="105" textAnchor="middle" dominantBaseline="middle" fontSize="45" fill="black" fontFamily="Azeret Mono" >N</text>
                 </svg>
+
+                {/* 데이터로부터 받아오는 점수값 중 S/N 비교하여 높은 점수 쪽에 매칭되는 텍스트 설정 */}
                 <div className="chart-label-container">
-                  <div className="chart-label-1">외향적</div>
+                  <div className="chart-label-1">
+                    {/* {getDominantTrait(scores['S'], scores['N'], "감각적", "직관적")} */}
+                  </div>
+                  {/* 퍼센테이지 설정 */}
                   <div className="chart-label" style={{ color: "#317287" }}>
-                    %
+                    {/* {percentages['S_N']}% */}
                   </div>
                 </div>
               </div>
@@ -306,14 +280,7 @@ const ResultPage = () => {
               <div className="chart-group">
                 {/* F/T */}
                 <svg viewBox="0 0 200 200" width="280px" height="280px">
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="90"
-                    fill="none"
-                    stroke="#ebebeb"
-                    strokeWidth="12"
-                  />
+                  <circle cx="100" cy="100" r="90" fill="none" stroke="#ebebeb" strokeWidth="12" />
                   <circle
                     cx="100"
                     cy="100"
@@ -321,36 +288,21 @@ const ResultPage = () => {
                     fill="none"
                     stroke="#0F4A42"
                     strokeWidth="12"
-                    strokeDasharray={2 * Math.PI * 90 * 0.5}
+                    strokeDasharray={2 * Math.PI * 90 * 0.5}    //백분율 적용 데이터 값 퍼센트 표시
                     strokeDashoffset={-2 * Math.PI * 90 * 0.25}
                   />
-                  <text
-                    x="60"
-                    y="105"
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fontSize="45"
-                    fill="black"
-                    fontFamily="Azeret Mono"
-                  >
-                    F
-                  </text>
-                  <text
-                    x="140"
-                    y="105"
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fontSize="45"
-                    fill="black"
-                    fontFamily="Azeret Mono"
-                  >
-                    T
-                  </text>
+                 <text x="60" y="105" textAnchor="middle" dominantBaseline="middle" fontSize="45" fill="black" fontFamily="Azeret Mono" >F</text>
+                 <text x="140" y="105" textAnchor="middle" dominantBaseline="middle" fontSize="45" fill="black" fontFamily="Azeret Mono" >T</text>
                 </svg>
+
+                {/* 데이터로부터 받아오는 점수값 중 T/F 비교하여 높은 점수 쪽에 매칭되는 텍스트 설정 */}
                 <div className="chart-label-container">
-                  <div className="chart-label-1">외향적</div>
+                  <div className="chart-label-1">
+                    {/* {getDominantTrait(scores['T'], scores['F'], "사고형", "감정형")} */}
+                  </div>
+                  {/* 퍼센테이지 설정 */}
                   <div className="chart-label" style={{ color: "#4257FF" }}>
-                    %
+                  {/* {percentages['T_F']}% */}
                   </div>
                 </div>
               </div>
@@ -358,14 +310,7 @@ const ResultPage = () => {
               <div className="chart-group">
                 {/* P/J */}
                 <svg viewBox="0 0 200 200" width="280px" height="280px">
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="90"
-                    fill="none"
-                    stroke="#ebebeb"
-                    strokeWidth="12"
-                  />
+                  <circle cx="100" cy="100" r="90" fill="none" stroke="#ebebeb" strokeWidth="12" />
                   <circle
                     cx="100"
                     cy="100"
@@ -373,36 +318,21 @@ const ResultPage = () => {
                     fill="none"
                     stroke="#E4AF3A"
                     strokeWidth="12"
-                    strokeDasharray={2 * Math.PI * 90 * 0.5}
+                    strokeDasharray={2 * Math.PI * 90 * 0.5}    //백분율 적용 데이터 값 퍼센트 표시
                     strokeDashoffset={2 * Math.PI * 90 * 0.25}
                   />
-                  <text
-                    x="60"
-                    y="105"
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fontSize="45"
-                    fill="black"
-                    fontFamily="Azeret Mono"
-                  >
-                    P
-                  </text>
-                  <text
-                    x="140"
-                    y="105"
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fontSize="45"
-                    fill="black"
-                    fontFamily="Azeret Mono"
-                  >
-                    J
-                  </text>
+                  <text x="60" y="105" textAnchor="middle" dominantBaseline="middle" fontSize="45" fill="black" fontFamily="Azeret Mono" >P</text>
+                  <text x="140" y="105" textAnchor="middle" dominantBaseline="middle" fontSize="45" fill="black" fontFamily="Azeret Mono" >J</text>
                 </svg>
+
+                {/* 데이터로부터 받아오는 점수값 중 P/J 비교하여 높은 점수 쪽에 매칭되는 텍스트 설정 */}
                 <div className="chart-label-container">
-                  <div className="chart-label-1">외향적</div>
+                  <div className="chart-label-1">
+                    {/* {getDominantTrait(scores['P'], scores['J'], "인식형", "판단형")} */}
+                  </div>
+                  {/* 퍼센테이지 설정 */}
                   <div className="chart-label" style={{ color: "#E4AF3A" }}>
-                    %
+                    {/* {percentages['J_P']}% */}
                   </div>
                 </div>
               </div>

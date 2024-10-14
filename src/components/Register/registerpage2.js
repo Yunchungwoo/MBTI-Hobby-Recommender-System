@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import axios from 'axios'; // axios를 사용하여 Django API 호출
 import "./registerpage2.css";
 
@@ -15,10 +16,25 @@ import emailImg from "../../assets/Reimg/email.svg";
 import birthImg from "../../assets/Reimg/birth.svg";
 
 function RegisterPage2() {
+  // const [username, setUsername] = useState('');    // 상태로 선언
+  // const [password, setPassword] = useState('');    // 상태로 선언
+  // const [email, setEmail] = useState('');          // 상태로 선언
+  // const [nickname, setNickname] = useState('');    // 상태로 선언
+  // const [fullName, setFullName] = useState('');    // 상태로 선언
+  // const [birthDate, setBirthDate] = useState('');  // 상태로 선언
+  const [selectedGender, setSelectedGender] = useState(null);
+  const [selectedNationality, setSelectedNationality] = useState(null);
+
   const handleNextClick = async () => {
     const userData = {
-    //   username: username,
-    //   password: password,
+      username: username,
+      password: password,
+      email: email,
+      nickname: nickname,
+      full_name: fullName,
+      birth_date: birthDate,
+      gender: selectedGender,
+      nationality: selectedNationality
     };
 
     try {
@@ -39,10 +55,9 @@ function RegisterPage2() {
       }
     }
   };
-  // 성별 및 국적 선택 상태 관리
+
+
   const navigate = useNavigate();
-  const [selectedGender, setSelectedGender] = useState(null);
-  const [selectedNationality, setSelectedNationality] = useState(null);
 
   // 비밀번호 표시 여부 상태 관리
   const [showPassword, setShowPassword] = useState(false);
@@ -85,11 +100,13 @@ function RegisterPage2() {
     <div className="SignupPage">
       <div className="div">
         {/* 로고 */}
-        <div className="LOGO-titlle">
-          Explore
-          <br />
-          HOBBY
-        </div>
+        <Link to="/mainHome">
+          <div className="LOGO-titlle">
+            Explore
+            <br />
+            HOBBY
+          </div>
+        </Link>
 
         {/* 회원가입 폼 */}
         <div className="signupbox">
@@ -102,6 +119,8 @@ function RegisterPage2() {
                   type="text"
                   className="textbox-input"
                   placeholder="아이디"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}  // 상태 업데이트
                 />
               </div>
             </div>
@@ -113,6 +132,8 @@ function RegisterPage2() {
                     type="email"
                     className="textbox-input"
                     placeholder="이메일(필수)"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}  // 상태 업데이트
                   />
                 </div>
               </div>
@@ -126,6 +147,8 @@ function RegisterPage2() {
                     className="textbox-input"
                     placeholder="비밀번호"
                     onFocus={() => setIsPasswordFocused(true)}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}  // 상태 업데이트
                   />
                   <img
                     className="eye"
@@ -144,6 +167,8 @@ function RegisterPage2() {
                     type="text"
                     className="textbox-input"
                     placeholder="닉네임"
+                    value={nickname}
+                    onChange={(e) => setNickname(e.target.value)}  // 상태 업데이트
                   />
                 </div>
               </div>
@@ -159,6 +184,8 @@ function RegisterPage2() {
                   type="text"
                   className="textbox-input"
                   placeholder="이름"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}  // 상태 업데이트
                 />
               </div>
             </div>
@@ -169,6 +196,8 @@ function RegisterPage2() {
                   type="text"
                   className="textbox-input"
                   placeholder="생년월일"
+                  value={birthDate}
+                  onChange={(e) => setBirthDate(e.target.value)}  // 상태 업데이트
                 />
               </div>
             </div>

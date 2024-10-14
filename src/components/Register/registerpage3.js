@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import './registerpage3.css'; // 기존 CSS 파일
 import './Rstyleguide.css'; // 추가적인 스타일 가이드
 import './Rglobals.css'; // 전역 스타일
@@ -14,7 +15,9 @@ function Registerpage3() {
   return (
     <div className="container-center-horizontal">
       <div className="u4370u4460u4363u4463u4523u4352u4449u4363u4469u4536-3 screen">
-        <div className="logo_-titlle notosanskr-black-black-35px">Explore<br />HOBBY</div>
+        <Link to="/mainHome">
+          <div className="logo_-titlle notosanskr-black-black-35px">Explore<br />HOBBY</div>
+        </Link>
         <div className="overlap-group1">
           <h1 className="text-2 text-3">가입 완료</h1>
           <div className="text"></div>

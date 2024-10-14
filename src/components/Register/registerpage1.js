@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // 페이지 이동을 위한 useNavigate
+import { Link } from "react-router-dom";
 import './Rstyleguide.css';
 import './Rglobals.css';
 import './registerpage1.css';
@@ -47,7 +48,9 @@ function Registerpage1() {
   return (
     <div className="container-center-horizontal">
       <div className="u4370u4460u4363u4463u4523u4352u4449u4363u4469u4536-1 screen">
-        <div className="logo_-titlle notosanskr-black-black-35px">Explore<br />HOBBY</div>
+        <Link to="/mainHome">
+          <div className="logo_-titlle notosanskr-black-black-35px">Explore<br />HOBBY</div>
+        </Link>
         <form onSubmit={handleSubmit}>
           <div className="overlap-group-container">
             <div className="overlap-group">

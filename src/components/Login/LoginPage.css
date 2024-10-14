@@ -104,7 +104,7 @@
 .loginpage-u40u4361u4462u4364u4453u4540u41 .text-1 {
   color: #757575;
   font-family: var(--font-family-zen_kurenaido);
-  font-size: var(--font-size-xl);
+  font-size: 1rem;
   height: 35px;
   left: 16px;
   letter-spacing: 0;
@@ -175,7 +175,7 @@
 .loginpage-u40u4361u4462u4364u4453u4540u41 .johndoeexamplecom {
   color: #757575;
   font-family: var(--font-family-zen_kaku_gothic_antique);
-  font-size: var(--font-size-xl);
+  font-size: 1rem;
   font-weight: 400;
   height: 35px;
   left: 17px;
@@ -218,7 +218,7 @@
 .loginpage-u40u4361u4462u4364u4453u4540u41 .proceed {
   color: var(--white);
   font-family: var(--font-family-zen_kaku_gothic_antique);
-  font-size: var(--font-size-xl);
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 28.2px;

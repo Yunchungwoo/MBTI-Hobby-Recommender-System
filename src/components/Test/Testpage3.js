@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
-import "./styleguide.css";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import "./testinpagestyleguide.css";
 import "./testingpage-1.css";
 
 const TestPage3 = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   // useState을 사용하여 현재 질문 번호와 사용자의 응답 상태를 저장합니다.
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [answers, setAnswers] = useState({
@@ -48,10 +50,57 @@ const TestPage3 = () => {
     }
   };
 
+  // 제출 버튼 클릭 시 실행될 함수
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(answers);
+    
+    // 이전 페이지에서 전달된 answers와 현재 페이지의 응답을 합침
+    const combinedAnswers = {
+      ...location.state.answers,  // 이전 페이지의 응답
+      ...answers                  // 현재 페이지의 응답
+    };
+  
+    // 다음 페이지로 combinedAnswers를 전달
+    navigate('/Test/step4', { state: { answers: combinedAnswers } });
   };
+
+  const questionMapping = {
+    "E/I": [1, 6, 11, 16, 21, 26, 31, 36],
+    "S/N": [2, 7, 12, 17, 22, 27, 32, 37],
+    "T/F": [3, 8, 13, 18, 23, 28, 33, 38],
+    "J/P": [4, 9, 14, 19, 24, 29, 34, 39]
+  };
+  
+  const responseMapping = {
+    "전혀 아니다": 1,
+    "아니다": 2,
+    "보통이다": 3,
+    "그렇다": 4,
+    "아주 그렇다": 5
+  };
+
+  const calculateMbtiScores = (answers) => {
+    const scores = { "E/I": 0, "S/N": 0, "T/F": 0, "J/P": 0 };
+  
+    // 각 지표별로 점수 합산
+    Object.keys(questionMapping).forEach((key) => {
+      questionMapping[key].forEach((questionNumber) => {
+        const answerValue = answers[`q${questionNumber}`];
+        if (responseMapping[answerValue]) {
+          scores[key] += responseMapping[answerValue];
+        }
+      });
+    });
+  
+    // 총 8개의 질문이 각 지표에 해당하므로 백분율 계산
+    const percentages = Object.keys(scores).reduce((acc, key) => {
+      acc[key] = (scores[key] / (questionMapping[key].length * 5)) * 100;
+      return acc;
+    }, {});
+  
+    return { scores, percentages };
+  };
+
 
   return (
     <>
@@ -280,7 +329,7 @@ const TestPage3 = () => {
 
             {/* 다음 버튼 */}
             <button type="submit" className="submit">
-              <Link to="">다음</Link>
+              <Link to="/Test/step4">다음</Link>
             </button>
           </div>
 

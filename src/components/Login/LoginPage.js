@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import axios from 'axios'; // axios 임포트
 import './globals.css';
 import './password.css';
@@ -23,29 +24,28 @@ function LoginPage() {
     const code = urlParams.get('code');
     const state = urlParams.get('state');
 
+    // 네이버 로그인 콜백 처리
     if (code && state) {
       const apiUrl = `http://localhost:8000/api/naver/callback/?code=${code}&state=${state}`;
 
-      fetch(apiUrl)
-        .then(response => {
-          console.log('API 응답:', response);  // 응답 로그 확인
-          return response.json();  // 응답 데이터를 JSON으로 파싱
-        })
+      // 쿠키 포함 요청
+      fetch(apiUrl, {
+        credentials: 'include', // 쿠키를 포함
+      })
+        .then(response => response.json())
         .then(data => {
-          console.log('API 응답 데이터:', data);  // 파싱된 데이터 확인
+          console.log('API 응답 데이터:', data);
           if (data.success) {
-            console.log('로그인 성공, 홈으로 이동합니다.');
-            localStorage.setItem('access_token', data.access_token);
-            localStorage.setItem('refresh_token', data.refresh_token);
-            localStorage.setItem('userProfile', JSON.stringify(data.profile));
-            window.location.href = '/home';  // 성공 시 홈으로 리디렉션
+            // 서버에서 쿠키로 토큰을 처리하므로, 쿠키가 자동으로 저장됨
+            window.location.href = '/home'; // 성공 시 홈으로 리디렉션
           } else {
             console.error('로그인 실패:', data.error);
           }
         })
         .catch(error => {
-          console.error('API 요청 실패:', error);  // 네트워크 또는 서버 오류 로그
+          console.error('API 요청 실패:', error); // 네트워크 또는 서버 오류 로그
         });
+
     }
   }, [navigate]);
   // 나머지 컴포넌트 코드
@@ -84,7 +84,7 @@ function LoginPage() {
       success: function (authObj) {
         console.log('카카오 로그인 성공:', authObj);
 
-        fetch('http://localhost:8000/api/kakao/callback/', { // HTTPS로 전송
+        fetch('https://localhost:8000/api/kakao/callback/', { // HTTPS로 전송
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ token: authObj.access_token }),
@@ -106,9 +106,10 @@ function LoginPage() {
       },
     });
   };
+
   const loginWithNaver = () => {
     const clientId = 'lV3FkVyO72bdyc5Nzh3l';  // 네이버 개발자 센터에서 발급받은 Client ID
-    const redirectUri = 'http://localhost:8000/api/naver/callback/';  // 백엔드에서 처리할 콜백 URL
+    const redirectUri = 'https://localhost:8000/api/naver/callback/';  // 백엔드에서 처리할 콜백 URL
     const state = 'random_state_value';  // CSRF 방지용 state 값 (임의의 값)
 
     // 네이버 로그인 페이지로 리다이렉트하는 URL 구성
@@ -143,9 +144,11 @@ function LoginPage() {
     <div className="login-page">
       <div className="container-center-horizontal">
         <div className="loginpage-u40u4361u4462u4364u4453u4540u41 loginpage">
-          <div className="logo_-titlle">
-            Explore<br />HOBBY
-          </div>
+          <Link to="/mainHome">
+            <div className="logo_-titlle">
+              Explore<br />HOBBY
+            </div>
+          </Link>
           <form id="Login-form" onSubmit={handleLogin}>
             <div className="overlap-group7">
               <div className="rectangle-2"></div>

@@ -28,6 +28,9 @@ import ESTPPage from './components/MBTI-Intro/ESTPPage.js'
 import ESFPPage from './components/MBTI-Intro/ESFPPage.js'
 import MainHome from './components/main/MainHome.js';
 import TestPage1 from './components/Test/TestPage1.js';
+import TestPage2 from './components/Test/TestPage2.js';
+import TestPage3 from './components/Test/Testpage3.js';
+import TestPage4 from './components/Test/Testpage4.js';
 import ResultPage from './components/Result/Result.js';
 
 function App() {
@@ -63,6 +66,9 @@ function App() {
           <Route path="/Intro/estp" element={<ESTPPage />} />
           <Route path="/Intro/esfp" element={<ESFPPage />} />
           <Route path="/Test/step1" element={<TestPage1 />} />
+          <Route path="/Test/step2" element={<TestPage2 />} />
+          <Route path="/Test/step3" element={<TestPage3 />} />
+          <Route path="/Test/step4" element={<TestPage4 />} />
           <Route path="/Test/result" element={<ResultPage />} />
         </Routes>
       </div>

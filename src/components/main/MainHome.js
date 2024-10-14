@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./style.css";
+import "./MainHomestyle.css";
 import "./MainHomestyleguide.css";
 
 import MainBanner1 from "../../assets/Intro/Group (1).svg";

@@ -1,15 +1,33 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./resultstyle.css";
+import { calculateMbtiScores } from "./mbtiCalculation";
 // 이미지 파일 import
 import lockicon from "../../assets/result/vector.png";
 import bannerimg from "../../assets/result/ENFJ.svg";
 
 const ResultPage = () => {
   const [isModalVisible, setModalVisible] = useState(false);
-// persent 와 score 설정
-//   const [percentages, setPercentages] = useState({});
-//   const [scores, setScores] = useState({});
+  const [scores, setScores] = useState({});
+  const [percentages, setPercentages] = useState({});
+
+  const location = useLocation();
+  const answers = location.state?.answers;
+
+  useEffect(() => {
+    const answers = location.state?.answers;
+    console.log(answers);
+    if (answers) {
+      const { scores, percentages } = calculateMbtiScores(answers);
+      setScores(scores);
+      setPercentages(percentages);
+    }
+  }, [location.state?.answers]);
+
+    // 각 지표별로 외향/내향 등 텍스트 설정 함수
+    const getDominantTrait = (score1, score2, trait1, trait2) => {
+      return score1 > score2 ? trait1 : trait2;
+    };
 
   const handleMouseEnter = () => {
     setModalVisible(true);
@@ -19,20 +37,6 @@ const ResultPage = () => {
     setModalVisible(false);
   };
 
-  //django 데이터 받아오는 함수 설정(임시)
-//   useEffect(() => {
-//     fetch('/api/enter to django link/')  // Django API 엔드포인트
-//       .then(response => response.json())
-//       .then(data => {
-//         setPercentages(data.percentages);
-//         setScores(data.scores);
-//       });
-//   }, []);
-
-  // 각 지표별로 외향/내향 등 텍스트 설정 함수
-//   const getDominantTrait = (score1, score2, trait1, trait2) => {
-//     return score1 > score2 ? trait1 : trait2;
-//   };
 
   return (
     <div className="result container-center-horizontal">
@@ -228,7 +232,7 @@ const ResultPage = () => {
                     fill="none"
                     stroke="#4257FF"
                     strokeWidth="12"
-                    strokeDasharray={2 * Math.PI * 90 * 0.5}    //백분율 적용 데이터 값 퍼센트 표시
+                    strokeDasharray={2 * Math.PI * 90 * (percentages['E/I'] / 100)}
                     strokeDashoffset={-2 * Math.PI * 90 * 0.25}
                   />
                   <text x="60" y="105" textAnchor="middle" dominantBaseline="middle" fontSize="45" fill="black" fontFamily="Azeret Mono" >E</text>
@@ -238,11 +242,11 @@ const ResultPage = () => {
                 {/* 데이터로부터 받아오는 점수값 중 E/I 비교하여 높은 점수 쪽에 매칭되는 텍스트 설정 */}
                 <div className="chart-label-container">
                   <div className="chart-label-1">
-                    {/* {getDominantTrait(scores['E'], scores['I'], "외향적", "내향적")} */}
+                  {getDominantTrait(scores['E/I'], 100 - scores['E/I'], "외향적", "내향적")}
                   </div>
                 {/* 퍼센테이지 설정 */}
                   <div className="chart-label" style={{ color: "#4257FF" }}>
-                  {/* {percentages['E_I']}% */}
+                  {percentages['E/I']}%
                   </div>
                 </div>
               </div>
@@ -268,11 +272,11 @@ const ResultPage = () => {
                 {/* 데이터로부터 받아오는 점수값 중 S/N 비교하여 높은 점수 쪽에 매칭되는 텍스트 설정 */}
                 <div className="chart-label-container">
                   <div className="chart-label-1">
-                    {/* {getDominantTrait(scores['S'], scores['N'], "감각적", "직관적")} */}
+                    {getDominantTrait(scores['S/N'], 100 - scores['S/N'], "감각적", "직관적")}
                   </div>
                   {/* 퍼센테이지 설정 */}
                   <div className="chart-label" style={{ color: "#317287" }}>
-                    {/* {percentages['S_N']}% */}
+                    {percentages['S/N']}%
                   </div>
                 </div>
               </div>
@@ -298,11 +302,11 @@ const ResultPage = () => {
                 {/* 데이터로부터 받아오는 점수값 중 T/F 비교하여 높은 점수 쪽에 매칭되는 텍스트 설정 */}
                 <div className="chart-label-container">
                   <div className="chart-label-1">
-                    {/* {getDominantTrait(scores['T'], scores['F'], "사고형", "감정형")} */}
+                    {getDominantTrait(scores['T/F'], 100 - scores['T/F'], "사고형", "감정형")}
                   </div>
                   {/* 퍼센테이지 설정 */}
                   <div className="chart-label" style={{ color: "#4257FF" }}>
-                  {/* {percentages['T_F']}% */}
+                  {percentages['T/F']}%
                   </div>
                 </div>
               </div>
@@ -328,11 +332,11 @@ const ResultPage = () => {
                 {/* 데이터로부터 받아오는 점수값 중 P/J 비교하여 높은 점수 쪽에 매칭되는 텍스트 설정 */}
                 <div className="chart-label-container">
                   <div className="chart-label-1">
-                    {/* {getDominantTrait(scores['P'], scores['J'], "인식형", "판단형")} */}
+                    {getDominantTrait(scores['J/P'], 100 - scores['J/P'], "인식형", "판단형")}
                   </div>
                   {/* 퍼센테이지 설정 */}
                   <div className="chart-label" style={{ color: "#E4AF3A" }}>
-                    {/* {percentages['J_P']}% */}
+                    {percentages['J/P']}%
                   </div>
                 </div>
               </div>

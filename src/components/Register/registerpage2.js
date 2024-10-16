@@ -16,12 +16,12 @@ import emailImg from "../../assets/Reimg/email.svg";
 import birthImg from "../../assets/Reimg/birth.svg";
 
 function RegisterPage2() {
-  // const [username, setUsername] = useState('');    // 상태로 선언
-  // const [password, setPassword] = useState('');    // 상태로 선언
-  // const [email, setEmail] = useState('');          // 상태로 선언
-  // const [nickname, setNickname] = useState('');    // 상태로 선언
-  // const [fullName, setFullName] = useState('');    // 상태로 선언
-  // const [birthDate, setBirthDate] = useState('');  // 상태로 선언
+  const [username, setUsername] = useState('');    // 상태로 선언
+  const [password, setPassword] = useState('');    // 상태로 선언
+  const [email, setEmail] = useState('');          // 상태로 선언
+  const [nickname, setNickname] = useState('');    // 상태로 선언
+  const [fullName, setFullName] = useState('');    // 상태로 선언
+  const [birthDate, setBirthDate] = useState('');  // 상태로 선언
   const [selectedGender, setSelectedGender] = useState(null);
   const [selectedNationality, setSelectedNationality] = useState(null);
 
@@ -55,8 +55,9 @@ function RegisterPage2() {
       }
     }
   };
+  
 
-
+  // 성별 및 국적 선택 상태 관리
   const navigate = useNavigate();
 
   // 비밀번호 표시 여부 상태 관리

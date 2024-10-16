@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./testinpagestyleguide.css";
 import "./testingpage-1.css";
 
-const TestPage1 = () => {
+const TestPage1 = ({ updateAnswers, allAnswers }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   // useState을 사용하여 현재 질문 번호와 사용자의 응답 상태를 저장합니다.
   const [currentQuestion, setCurrentQuestion] = useState(1);
@@ -37,10 +38,7 @@ const TestPage1 = () => {
 
   // 사용자가 선택한 값을 업데이트하는 함수
   const handleChange = (e) => {
-    setAnswers({
-      ...answers,
-      [e.target.name]: e.target.value,
-    });
+    setAnswers({ ...answers, [e.target.name]: e.target.value });
 
     // 현재 질문에 따라 다음 질문으로 이동
     const questionNumber = parseInt(e.target.name.slice(1));
@@ -52,8 +50,28 @@ const TestPage1 = () => {
   // 제출 버튼 클릭 시 실행될 함수
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/Test/step2', { state: { answers: answers } });
-  };
+    
+    // 기본값을 '보통이다'로 설정하여 answers 객체를 완성
+    const combinedAnswers = {
+        q1: answers.q1 || "보통이다",
+        q2: answers.q2 || "보통이다",
+        q3: answers.q3 || "보통이다",
+        q4: answers.q4 || "보통이다",
+        q5: answers.q5 || "보통이다",
+        q6: answers.q6 || "보통이다",
+        q7: answers.q7 || "보통이다",
+        q8: answers.q8 || "보통이다",
+        q9: answers.q9 || "보통이다",
+        q10: answers.q10 || "보통이다",
+    };
+
+    const mergedAnswers = { ...allAnswers, ...combinedAnswers };
+    
+    updateAnswers(combinedAnswers);
+    navigate("/Test/step2", { state: { answers: combinedAnswers } });
+    
+};
+  
 
   const questionMapping = {
     "E/I": [1, 6, 11, 16, 21, 26, 31, 36],
@@ -70,27 +88,6 @@ const TestPage1 = () => {
     "아주 그렇다": 5
   };
 
-  const calculateMbtiScores = (answers) => {
-    const scores = { "E/I": 0, "S/N": 0, "T/F": 0, "J/P": 0 };
-  
-    // 각 지표별로 점수 합산
-    Object.keys(questionMapping).forEach((key) => {
-      questionMapping[key].forEach((questionNumber) => {
-        const answerValue = answers[`q${questionNumber}`];
-        if (responseMapping[answerValue]) {
-          scores[key] += responseMapping[answerValue];
-        }
-      });
-    });
-  
-    // 총 8개의 질문이 각 지표에 해당하므로 백분율 계산
-    const percentages = Object.keys(scores).reduce((acc, key) => {
-      acc[key] = (scores[key] / (questionMapping[key].length * 5)) * 100;
-      return acc;
-    }, {});
-  
-    return { scores, percentages };
-  };
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginPage from './components/Login/LoginPage';
 import Registerpage1 from './components/Register/registerpage1';
@@ -34,6 +34,15 @@ import TestPage4 from './components/Test/Testpage4.js';
 import ResultPage from './components/Result/Result.js';
 
 function App() {
+  const [allAnswers, setAllAnswers] = useState({});
+
+  const updateAnswers = (newAnswers) => {
+    setAllAnswers((prevAnswers) => ({
+      ...prevAnswers,
+      ...newAnswers,
+    }));
+  };
+
   return (
     <Router>
       <div>
@@ -65,11 +74,11 @@ function App() {
           <Route path="/Intro/isfp" element={<ISFPPage />} />
           <Route path="/Intro/estp" element={<ESTPPage />} />
           <Route path="/Intro/esfp" element={<ESFPPage />} />
-          <Route path="/Test/step1" element={<TestPage1 />} />
-          <Route path="/Test/step2" element={<TestPage2 />} />
-          <Route path="/Test/step3" element={<TestPage3 />} />
-          <Route path="/Test/step4" element={<TestPage4 />} />
-          <Route path="/Test/result" element={<ResultPage />} />
+          <Route path="/Test/step1" element={<TestPage1 updateAnswers={updateAnswers} allAnswers={allAnswers} />}/>
+          <Route path="/Test/step2" element={<TestPage2 updateAnswers={updateAnswers} allAnswers={allAnswers} />}/>
+          <Route path="/Test/step3" element={<TestPage3 updateAnswers={updateAnswers} allAnswers={allAnswers} />}/>
+          <Route path="/Test/step4" element={<TestPage4 updateAnswers={updateAnswers} allAnswers={allAnswers} />}/>
+          <Route path="/Test/result" element={<ResultPage allAnswers={allAnswers} />} />
         </Routes>
       </div>
     </Router>

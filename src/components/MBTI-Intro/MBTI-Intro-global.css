@@ -1,0 +1,56 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:500,700,900|Azeret+Mono:700,600");
+@import url("https://px.animaapp.com/66e143a8c85c33a41aea2668.66e143a9c85c33a41aea266b.48VbOEy.hcp.png");
+
+/* 스타일 초기화 */
+.screenmbti a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.screenmbti a {
+  text-decoration: none;
+  color: black;
+}
+.screenmbti  a:visited {
+  text-decoration: none;
+}
+.screenmbti a:hover {
+  text-decoration: none;
+}
+.screenmbti a:focus {
+  text-decoration: none;
+}
+.screenmbti a:hover,
+.screenmbti a:active {
+  text-decoration: none;
+}
+
+.screenmbti svg {
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.screenmbti .text {
+  align-self: stretch;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+}

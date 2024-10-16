@@ -1,0 +1,453 @@
+/* screen - loginpage-u40u4361u4462u4364u4453u4540u41 */
+/* 로그인 페이지 전체 레이아웃 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  height: 1024px;
+  padding: 42px 66px;
+  width: 1440px;
+}
+
+/* 페이지 상단 로고 제목 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .logo_-titlle {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans_kr);
+  font-size: var(--font-size-xxl);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 44px;
+  margin-left: 82px;
+  min-height: 88px;
+}
+
+/* 로그인페이지 박스 컨테이너 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .overlap-group7 {
+  height: 671px;
+  position: relative;
+  width: 948px;
+}
+
+/* 로그인 박스 형태 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .rectangle-2 {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--bon-jour);
+  box-shadow: 0px 82px 40px -14px #64646414;
+  height: 671px;
+  left: 374px;
+  position: absolute;
+  top: 0;
+  width: 574px;
+}
+
+/* 로그인 페이지의 메인 제목 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .log-in-to-qpay {
+  color: var(--black);
+  font-family: var(--font-family-zen_kaku_gothic_new);
+  font-size: var(--font-size-xxxl);
+  font-weight: 900;
+  left: 470px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  text-align: center;
+  top: 48px;
+  white-space: nowrap;
+  width: 380px;
+}
+
+/* 입력필드(아이디, 비밀번호) 및 로그인버튼, 링크버튼을 감싸는 그룹 컨테이너 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .group-3 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  min-height: 306px;
+  position: absolute;
+  top: 140px;
+  width: 390px;
+  margin-left: 470px;
+}
+
+/* 아이디, 비밀번호 입력 필드를 감싸는 그룹 컨테이너 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .overlap-group-container {
+  height: 157px;
+  margin-right: -1.0px;
+  margin-top: 2px;
+  margin-bottom: 65px;
+  position: relative;
+  width: 382px;
+}
+
+/* password 클래스: 비밀번호 입력필드, 아이콘버튼을 감싸는 컨테이너 스타일  */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .overlap-group1 {
+  align-items: center;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--bon-jour);
+  display: flex;
+  gap: 7px;
+  height: 79px;
+  justify-content: flex-end;
+  left: 0;
+  min-width: 382px;
+  padding: 12.7px 12.0px;
+  position: absolute;
+  top: 78px;
+  width: 382px;
+}
+
+/* password 클래스: 패스워드 입력필드 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .text-1 {
+  color: #757575;
+  font-family: var(--font-family-zen_kurenaido);
+  font-size: 1rem;
+  height: 35px;
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 28.2px;
+  position: absolute;
+  top: 26px;
+  white-space: nowrap;
+  width: 330px;
+}
+
+/* password 클래스: 비밀번호 표시 버튼(눈 아이콘) 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .ex-iconeye {
+  /* background-image: url('../../assets/images/eyeremoveicon.png'); */
+  background-size: 100% 100%;
+  position: absolute;
+  height: 22px;
+  margin-top: 5px;
+  margin-right: 35px;
+  width: 22px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* password 클래스: 비밀번호 보기 버튼(눈 아이콘) 클릭 시 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .ex-iconeye:focus {
+  background-image: url('../../assets/Logimg/eye-1.png');
+  background-size: 100% 100%;
+  position: absolute;
+  height: 10px;
+  margin-top: 5px;
+  /* margin-right: 35px; */
+  width: 10px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* password 스타일: 비밀번호 삭제 버튼(닫기 아이콘) 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .ex-icondelete {
+  background-image: url('../../assets/Logimg/CloseButton.png');
+  background-size: 100% 100%;
+  position: absolute;
+  height: 22px;
+  margin-top: 5px;
+  width: 22px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* ID 스타일: 아이디 입력 필드 컨테이너 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .overlap-group2 {
+  align-items: center;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--bon-jour);
+  display: flex;
+  gap: 7px;
+  height: 79px;
+  justify-content: flex-end;
+  left: 0;
+  min-width: 382px;
+  padding: 12.7px 12.0px;
+  position: absolute;
+  top: 0;
+  width: 382px;
+}
+
+/* ID 클래스: 아이디 입력 필드 텍스트 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .johndoeexamplecom {
+  color: #757575;
+  font-family: var(--font-family-zen_kaku_gothic_antique);
+  font-size: 1rem;
+  font-weight: 400;
+  height: 35px;
+  left: 17px;
+  letter-spacing: 0;
+  line-height: 28.2px;
+  position: absolute;
+  top: 21px;
+  width: 330px;
+}
+
+/* 레이블 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .email-address {
+  color: #424242;
+  font-family: var(--font-family-zen_kaku_gothic_antique);
+  font-size: var(--font-size-s);
+  font-weight: 500;
+  left: 15px;
+  letter-spacing: 0;
+  line-height: 18.1px;
+  position: absolute;
+  top: 14px;
+  white-space: nowrap;
+  width: 78px;
+}
+
+/* 로그인 버튼 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .overlap-group4 {
+  cursor: pointer;
+  align-items: flex-end;
+  background-color: #212121;
+  display: flex;
+  height: 73px;
+  min-width: 380px;
+  padding: 15px 154px;
+  margin-top: 5px;
+  margin: 20px 0 0 1px;
+}
+
+/* 로그인 버튼의 텍스트(로그인) 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .proceed {
+  color: var(--white);
+  font-family: var(--font-family-zen_kaku_gothic_antique);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 28.2px;
+  min-height: 33px;
+  text-align: center;
+  white-space: nowrap;
+  width: 72px;
+}
+
+/* 로그인 상태 유지 체크박스와 텍스트 그룹 박스 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .overlap-group5 {
+  height: 26px;
+  left: 462px;
+  position: absolute;
+  top: 338px;
+  width: 111px;
+}
+
+/* 로그인 상태 유지 옵션 텍스트 스타일  */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .terms {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 22.5px;
+  position: absolute;
+  text-align: right;
+  top: 0;
+  white-space: nowrap;
+  width: 111px;
+}
+
+.rectangle-376 {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: var(--white);
+  border: 1px solid #cecaca;
+  position: relative;
+  /* 절대 위치 대신 상대 위치 사용 */
+  cursor: pointer;
+  margin-right: 10px;
+  /* 체크박스와 라벨 사이 간격 */
+}
+
+/* 체크박스가 선택되었을 때의 스타일 */
+.rectangle-376.checked {
+  background-color: var(--blue);
+  /* 선택되었을 때 배경색을 파란색으로 변경 */
+  border: 1px solid var(--blue);
+  /* 테두리 색상도 변경 */
+}
+
+/* 선택된 체크박스 안의 체크 표시 */
+.rectangle-376.checked:before {
+  content: "\2713";
+  /* 체크 표시 */
+  width: 16px;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* 비밀번호 찾기 링크 버튼 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .terms-1 {
+  left: 585px;
+  width: 64px;
+}
+
+/* 아이디 찾기 링크 버튼 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .terms-2 {
+  left: 521px;
+  width: 54px;
+}
+
+/* 회원가입 링크 버튼 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .terms-3 {
+  left: 469px;
+  width: 42px;
+}
+
+/* 비밀번호 찾기, 아이디 찾기, 회원가입 링크 텍스트 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .terms-4 {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: 22.5px;
+  position: absolute;
+  text-decoration: underline;
+  top: 308px;
+  white-space: nowrap;
+}
+
+/* "또는" 텍스트 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .or-use {
+  color: var(--storm-dust);
+  font-family: var(--font-family-zen_kaku_gothic_antique);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  left: 639px;
+  letter-spacing: 0;
+  line-height: 22.5px;
+  position: absolute;
+  text-align: center;
+  top: 530px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+
+/* 가로선(구분석) 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .line {
+  height: 2px;
+  object-fit: cover;
+  position: absolute;
+  width: 250px;
+}
+
+/* 가로선(구분선) 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .line-1 {
+  left: 389px;
+  top: 542px;
+}
+
+.loginpage-u40u4361u4462u4364u4453u4540u41 .line-2 {
+  left: 684px;
+  top: 542px;
+}
+
+/* 구글, 네이버, 카카오 등 소셜 로그인 버튼 그룹 컨테이너 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .overlap-group6 {
+  height: 46px;
+  left: 562px;
+  position: absolute;
+  top: 575px;
+  width: 183px;
+}
+
+/* 소설 로그인 버튼 간의 정렬, 간격 조절 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .btnicongroup {
+  align-items: flex-start;
+  display: flex;
+  gap: 25px;
+  height: 46px;
+  justify-content: center;
+  left: 0;
+  min-width: 183px;
+  position: absolute;
+  top: 0;
+}
+
+/* 소셜 로그인 구분석, 버튼 사이의 간격 조절 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .pngwingcom-1 {
+  height: 32px;
+  left: 76px;
+  object-fit: cover;
+  position: absolute;
+  top: 7px;
+  width: 32px;
+  padding: 0;
+}
+
+/* 구글 로그인 버튼 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .overlap-group-1 {
+  align-items: flex-start;
+  background-color: var(--alabaster);
+  border: 1px solid;
+  border-color: var(--gallery);
+  display: flex;
+  height: 48px;
+  margin-top: -0.71px;
+  min-width: 45px;
+  padding: 6.8px 6.5px;
+}
+
+/* 구글 아이콘 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .icons8-google {
+  height: 32px;
+  width: 30px;
+  padding: 0;
+}
+
+/* 네이버 로그인 아이콘 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .rectangle-3 {
+  background-color: var(--alabaster);
+  border: 1px solid;
+  border-color: var(--gallery);
+  height: 48px;
+  margin-top: -1px;
+  width: 45px;
+}
+
+/* 카카오 로그인 아이콘 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .overlap-group1-1 {
+  align-items: flex-start;
+  background-color: var(--alabaster);
+  border: 1px solid;
+  border-color: var(--gallery);
+  display: flex;
+  height: 48px;
+  margin-top: -1px;
+  min-width: 45px;
+  padding: 7px 6px;
+}
+
+/* 카카오 로그인 아이콘 스타일 */
+.loginpage-u40u4361u4462u4364u4453u4540u41 .icons8-facebook {
+  background-image: url('../../assets/Logimg/kakao.png');
+  background-position: center;
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+}
+
+/* 에러 메시지 박스를 위한 박스 스타일 */
+.login_error_wrap {
+  position: relative;
+  min-height: 25px;
+  margin: 10px 0 0;
+}
+
+/* 에러 메시지의 텍스트 스타일 */
+.error_message {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -.5px;
+  color: #ff0101;
+  vertical-align: middle;
+}

@@ -1,0 +1,467 @@
+/* 전체 레이아웃 설정 */
+.FindIDresult {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+.FindIDresult .FindIDresult-2 {
+  background-color: #ffffff;
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  padding: 20px;
+}
+
+/* 버튼 및 컨테이너 설정 */
+.FindIDresult .FindIDresult-groupbox,
+.FindIDresult .FindIDresult-selected {
+  height: 400px;
+  position: relative;
+}
+
+.FindIDresult .FindIDresult-container {
+  background-color: #ffffff;
+  border: 1px solid white;
+  height: 470px;
+  left: -1px;
+  position: relative;
+  top: -1px;
+  width: 500px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 버튼 이미지 설정 */
+.FindIDresult .select-btn-id,
+.FindIDresult .select-btn-pass {
+  height: 47px;
+  position: absolute;
+  top: 25px;
+  width: 155px;
+}
+
+.FindIDresult .select-btn-id {
+  left: 7px;
+}
+
+.FindIDresult .select-btn-pass {
+  left: 142px;
+}
+
+/* 버튼 텍스트 스타일 */
+.FindIDresult .select-btn-id-text,
+.FindIDresult .select-btn-pass-text {
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 25px;
+  white-space: nowrap;
+}
+
+.FindIDresult .select-btn-id-text {
+  left: 68px;
+  color: #8e8888;;
+}
+
+.FindIDresult .select-btn-pass-text {
+  left: 181.5px;
+}
+
+.FindIDresult .ID-into-title {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 27px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 80px;
+  white-space: nowrap;
+  width: 327px;
+}
+
+
+/* 아이디 정보창 */
+.FindIDresult .ID-info-section {
+  height: 270px;
+  left: 40px;
+  position: absolute;
+  top: 130px;
+  width: 667px;
+}
+
+.FindIDresult .ID-info-containerbox {
+  height: 270px;
+  width: 673px;
+}
+
+.FindIDresult .D-info-box {
+  height: 271px;
+  position: relative;
+  width: 667px;
+}
+
+.FindIDresult .ID-info-box-group {
+  height: 271px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 418px;
+}
+
+.FindIDresult .ID-info-background {
+  background-color: #d9d9d9;
+  border-color: #000000;
+  border-top-style: solid;
+  border-top-width: 0.5px;
+  height: 61px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 418px;
+}
+
+.FindIDresult .info-label-1 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 73px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 8px;
+  white-space: nowrap;
+  width: 327px;
+}
+
+.FindIDresult .info-label-2 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 201px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 8px;
+  white-space: nowrap;
+  width: 327px;
+}
+
+.FindIDresult .info-label-3 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 340px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 8px;
+  white-space: nowrap;
+  width: 327px;
+}
+
+.FindIDresult .ID-details-1 {
+  height: 50px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 72px;
+  width: 406px;
+}
+
+.FindIDresult .ID-details-2 {
+  height: 50px;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 130px;
+  width: 406px;
+}
+
+.FindIDresult .ID-details-3 {
+  height: 50px;
+  left: 0px;
+  position: absolute;
+  display: flex;
+  top: 190px;
+  width: 406px;
+  align-items: center;
+}
+
+
+/* 체크박스 스타일 */
+[type="radio"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  box-shadow: 0 0 0 1px rgb(164, 164, 164);
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+}
+
+[type="radio"]:checked {
+  box-shadow: 0 0 0 1px rgb(0, 0, 0);
+  border: 4px solid rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+}
+
+.FindIDresult .info-value-1,
+.FindIDresult .info-value-2,
+.FindIDresult .info-value-3,
+.FindIDresult .info-value-4,
+.FindIDresult .info-value-5,
+.FindIDresult .info-value-6 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 44px;
+  white-space: nowrap;
+}
+
+.FindIDresult .info-value-1 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 11px;
+  font-weight: 300;
+  left: 15%;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 61px;
+}
+
+.FindIDresult .info-value-2 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 11px;
+  font-weight: 300;
+  left: 46.5%;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 61px;
+}
+
+.FindIDresult .info-value-3 {
+  color: #04a314;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 11px;
+  font-weight: 300;
+  left: 86.3%;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 61px;
+}
+
+.FindIDresult .info-value-4 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 11px;
+  font-weight: 300;
+  left: 15%;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 61px;
+}
+
+.FindIDresult .info-value-5 {
+  color: #000000;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 11px;
+  font-weight: 300;
+  left: 46.5%;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 61px;
+}
+
+.FindIDresult .info-value-6 {
+  color: #04a314;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 11px;
+  font-weight: 300;
+  left: 86.3%;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 61px;
+}
+
+.FindIDresult .Login-link-button {
+  height: 78px;
+  left: 125px;
+  position: absolute;
+  top: 390px;
+  width: 313px;
+}
+
+.FindIDresult .Login-link-button-section {
+  height: 78px;
+  position: relative;
+  cursor: pointer;
+}
+
+.FindIDresult .Login-link-button-box {
+  height: 78px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 198px;
+}
+
+.FindIDresult .overlap-group-6 {
+  height: 78px;
+  position: relative;
+  width: 196px;
+}
+
+.FindIDresult .Login-rectangle {
+  background-color: #000000;
+  height: 36px;
+  left: 0;
+  position: absolute;
+  top: 4px;
+  width: 118px;
+}
+
+.FindIDresult .Login-link-button-text {
+  color: #ffffff;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 10px;
+  font-weight: 500;
+  left: 44px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 0;
+  width: 152px;
+}
+
+.FindIDresult .reset-button {
+  height: 78px;
+  left: 136px;
+  position: absolute;
+  top: 0;
+  width: 177px;
+}
+
+.FindIDresult .reset-button-section {
+  height: 78px;
+  width: 179px;
+  cursor: pointer;
+}
+
+.FindIDresult .reset-background {
+  height: 78px;
+  position: relative;
+  width: 177px;
+}
+
+.FindIDresult .reset-rectangle {
+  background-color: #ffffff;
+  border: 0.5px solid;
+  border-color: #857c7c;
+  height: 36px;
+  left: 0;
+  position: absolute;
+  top: 4px;
+  width: 118px;
+}
+
+.FindIDresult .reset-button-text {
+  color: #867c7c;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 10px;
+  font-weight: 500;
+  left: 25px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 0;
+  width: 152px;
+}
+
+.FindIDresult .vector,
+.FindIDresult .vector-2 {
+  position: absolute;
+  bottom: 0;
+  object-fit: cover;
+  height: 1px;
+  width: 416px;
+  padding: 0;
+}
+
+
+/* 라인(구분선) 이미지 스타일 */
+.FindIDresult .line {
+  height: 1px;
+  left: 276px;
+  position: absolute;
+  top: 68px;
+  width: 176px;
+}
+
+/* 앵커 태그 초기화 */
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.FindIDresult .linkbtn1 {
+  color: white;
+  margin-left: -6px;
+  cursor: pointer;
+}
+
+.FindIDresult .linkbtn2 {
+  color: #958f8f;
+  margin-left: -13.5px;
+  cursor: pointer;
+}
+
+.FindIDresult img {
+  padding-left: 20px;
+}

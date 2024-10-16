@@ -1,0 +1,28 @@
+:root {
+  --alabaster: #fafafa;
+  --black: #000000;
+  --bon-jour: #e0e0e0;
+  --gallery: #eeeeee;
+  --storm-dust: #616161;
+  --white: #ffffff;
+
+  --font-size-l: 12.8px;
+  --font-size-m: 11px;
+  --font-size-s: 10.3px;
+  --font-size-xl-1: 16px;
+  --font-size-xxl: 35px;
+  --font-size-xxxl: 44px;
+
+  --font-family-noto_sans_kr: "Noto Sans KR", Helvetica;
+  --font-family-zen_kaku_gothic_antique: "Zen Kaku Gothic Antique", Helvetica;
+  --font-family-zen_kaku_gothic_new: "Zen Kaku Gothic New", Helvetica;
+  --font-family-zen_kurenaido: "Zen Kurenaido", Helvetica;
+}
+
+.zenkakugothicantique-normal-storm-dust-11px {
+  color: var(--storm-dust);
+  font-family: var(--font-family-zen_kaku_gothic_antique);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}

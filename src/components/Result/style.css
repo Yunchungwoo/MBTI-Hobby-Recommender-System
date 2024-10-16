@@ -1,0 +1,154 @@
+.frame {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.frame .div {
+  background-color: #ffffff;
+  height: 4773px;
+  overflow: hidden;
+  position: relative;
+  width: 1920px;
+}
+
+.frame .element {
+  height: 55px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+}
+
+.frame .element-a-b {
+  height: 268px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 4505px;
+  width: 1920px;
+}
+
+.frame .overlap-group {
+  height: 1833px;
+  left: 0;
+  position: absolute;
+  top: 55px;
+  width: 1927px;
+}
+
+.frame .group {
+  height: 1367px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1927px;
+}
+
+.frame .rectangle {
+  background-color: #4156ff;
+  height: 823px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+}
+
+.frame .rectangle-2 {
+  background-color: #4156fffa;
+  height: 69px;
+  left: 0;
+  position: absolute;
+  top: 823px;
+  width: 1921px;
+}
+
+.frame .wave {
+  height: 405px;
+  left: 0;
+  position: absolute;
+  top: 962px;
+  width: 1920px;
+}
+
+.frame .rectangle-3 {
+  background-color: #4156ffed;
+  height: 69px;
+  left: 0;
+  position: absolute;
+  top: 893px;
+  width: 1921px;
+}
+
+.frame .rectangle-4 {
+  background-color: #ffffff;
+  border-radius: 80px;
+  box-shadow: 0px 4px 10px 8px #00000040;
+  height: 748px;
+  left: 544px;
+  position: absolute;
+  top: 412px;
+  width: 839px;
+}
+
+.frame .text-wrapper {
+  color: #ffffff;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 100px;
+  font-weight: 700;
+  left: 835px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 206px;
+}
+
+.frame .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 50px;
+  font-weight: 300;
+  left: 756px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 111px;
+}
+
+.frame .ENFJ {
+  height: 657px;
+  left: 656px;
+  position: absolute;
+  top: 458px;
+  width: 615px;
+}
+
+.frame .rectangle-5 {
+  background-color: #ffffff;
+  border-color: #4156ff;
+  border-radius: 31px;
+  border-top-style: solid;
+  border-top-width: 18px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 599px;
+  left: 208px;
+  position: absolute;
+  top: 1234px;
+  width: 1509px;
+}
+
+.frame .text-wrapper-3 {
+  color: #000000;
+  font-family: "Inter", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  left: 290px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 1342px;
+  width: 1349px;
+}

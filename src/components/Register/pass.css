@@ -1,0 +1,23 @@
+/* 부모 요소 스타일 */
+.group-41 {
+    display: flex; /* Flexbox를 사용하여 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    margin-bottom: 20px; /* 아래 여백 설정 */
+}
+
+/* 비밀번호 입력 필드 스타일 */
+#password {
+    width: 585px; /* 원하는 너비로 설정 (필요에 따라 조정) */
+    height: var(--name-input-height); /* 입력 필드 높이 설정 */
+    padding: var(--name-input-padding); /* 내부 여백 설정 */
+    border: 1px solid var(--name-border-color); /* 테두리 설정 */
+    border-radius: var(--name-border-radius); /* 모서리 둥글게 설정 */
+    box-sizing: border-box; /* 패딩과 테두리 크기 포함 */
+    font-size: var(--name-label-font-size); /* 폰트 크기 설정 */
+}
+
+/* 포커스 시 비밀번호 입력 필드 스타일 */
+#password:focus {
+    border-color: #007bff; /* 포커스 시 테두리 색상 변경 */
+    outline: none; /* 기본 포커스 아웃라인 제거 */
+}

@@ -1,0 +1,363 @@
+/* html 및 body 태그 초기화, 마진 및 패딩을 제거하고 전체 높이를 설정 */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* 컨테이너를 수직 정렬, 전체 높이를 최소한으로 유지 */
+.container-horizontal {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 네비게이션 바 설정 */
+.testingpage-1 .navbar {
+  position: fixed; /* 네비게이션 바를 고정하여 스크롤 시에도 항상 상단에 고정 */
+  display: flex;
+  justify-content: space-between; /* 좌우 메뉴를 양 끝에 배치 */
+  align-items: center; /* 수직 중앙 정렬 */
+  width: 100%; /* 전체 너비 차지 */
+  box-sizing: border-box;
+  background-color: var(--white);
+  min-height: 72px; /* 최소 높이 설정 */
+  top: 0;
+  padding: 0 5% 0 5%;
+  z-index: 10
+}
+
+/* 왼쪽 메뉴 (로고, MBTI 검사, MBTI 유형 드롭다운) */
+.left-menu {
+  display: flex; /* 로고와 메뉴를 가로로 나열 */
+  align-items: center;
+  gap: 20px;
+}
+
+/* 오른쪽 메뉴 (로그인, 회원가입) */
+.right-menu {
+  display: flex; /* 로그인 및 회원가입 버튼을 가로로 나열 */
+  align-items: center;
+  gap: 20px;
+}
+
+/* 네비게이션 바 버튼 스타일 */
+.nav-btn {
+  color: black;
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-family: "Noto Sans KR", Arial, sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease; /* 호버 시 색상 변화 애니메이션 */
+}
+
+/* 버튼 호버 시 색상 변화 */
+.nav-btn:hover {
+  color: var(--blueberry);
+}
+
+.nav-btn {
+  color: black;
+}
+
+/* 미디어 쿼리: 화면 너비가 768px 이하일 때의 네비게이션 바 설정 */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* 작은 화면에서는 세로로 정렬 */
+  }
+  .left-menu,
+  .right-menu {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+/* MBTI 유형 서브 메뉴 및 드롭다운 버튼 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* 드롭다운 버튼 스타일 */
+.dropdown-btn {
+  color: black;
+  background-color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-family: "Noto Sans KR", Arial, sans-serif;
+}
+
+/* 드롭다운 메뉴 스타일 */
+.dropdown-menu {
+  list-style: none;
+  display: none;
+  grid-template-columns: repeat(4, 1fr); /* 4개의 열로 그리드 정렬 */
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin: 0;
+  border-radius: 10px;
+}
+
+/* 드롭다운 버튼 호버 시 메뉴 표시 */
+.dropdown:hover .dropdown-menu {
+  display: grid;
+}
+
+/* 드롭다운 메뉴 항목 간격 및 패딩 설정 */
+.dropdown-menu li {
+  padding: 10px;
+  margin: 7px;
+}
+
+.testingpage-1 a.button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 80px;
+  padding: 0;
+  font-weight: 500;
+  text-align: center;
+  line-height: 40px;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.btnGreen {
+  background: #00AE68;
+}
+
+.btnLightBlue {
+  background: #4299B3;
+}
+
+.btnOrange {
+  background: #F6D75D;
+}
+
+.btnblue {
+  background: #5669ff;
+}
+
+/* 호버 시 색상 변경 */
+.btnFade.btnGreen:hover {
+  background: #21825B;
+}
+
+.btnFade.btnLightBlue:hover {
+  background: #317287;
+}
+
+.btnFade.btnOrange:hover {
+  background: #E4AF3A;
+}
+
+.btnFade.btnblue:hover {
+  background: #344cff;
+}
+
+/* 검사 페이지 배너 설정 */
+.test-banner {
+  width: 100%;
+  height: 400px;
+  background-image: url(../../assets/Test/test-banner.svg); /* 배너 이미지 설정 */
+  background-size: cover;  /* 이미지가 컨테이너 크기에 맞도록 조정 */
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 72px;
+  position: relative;
+}
+
+
+/* form 스타일 */
+.form-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.testingpage-1 {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding-top: 120px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.logo-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+
+/* 질문 섹션의 레이아웃 */
+.question {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+/* 질문과 질문 사이의 구분선 */
+.question-line {
+  width: 100vw;
+  height: 2px;
+  background-color: #c4c4c4;
+  margin: 15px 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); /* 화면 전체 너비에 맞춰 구분선 위치 조정 */
+}
+
+/* 질문 제목 스타일 */
+.question-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 라디오 버튼 옵션 스타일 */
+.radio-options {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* 각 라디오 버튼의 텍스트 스타일 */
+.radio-text {
+  font-size: 16px;
+  align-self: center;
+  font-weight: bold;
+}
+
+.radio-options label:nth-child(2) .custom-radio,
+.radio-options label:nth-child(6) .custom-radio {
+  height: 50px;
+  width: 50px;
+}
+
+.radio-options label:nth-child(3) .custom-radio,
+.radio-options label:nth-child(5) .custom-radio {
+  height: 40px;
+  width: 40px;
+}
+
+.radio-options label:nth-child(4) .custom-radio {
+  height: 30px;
+  width: 30px;
+}
+
+.radio-label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.radio-button {
+  display: none;
+}
+
+/* 라디오 버튼의 커스텀 스타일 */
+.custom-radio {
+  height: 50px;
+  width: 50px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: border-color 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+/* 라디오 버튼이 선택된 상태일 때 스타일 */
+.radio-button:checked + .custom-radio {
+  border-color: #6c63ff;
+  background-color: #6c63ff;
+}
+
+.radio-options label:nth-child(2) .custom-radio::after,
+.radio-options label:nth-child(6) .custom-radio::after {
+  font-size: 40px;
+}
+
+.radio-options label:nth-child(3) .custom-radio::after,
+.radio-options label:nth-child(5) .custom-radio::after {
+  font-size: 30px;
+}
+
+.radio-options label:nth-child(4) .custom-radio::after {
+  font-size: 20px;
+}
+
+.custom-radio::after {
+  content: '✓';
+  color: white;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-radio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.radio-button:checked + .custom-radio::after {
+  opacity: 1;
+}
+
+@keyframes checkmark {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+/* 제출 버튼 스타일 */
+.submit {
+  padding: 15px 80px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* footer 설정 */
+.container .footer {
+  top: 2000px;
+  box-sizing: border-box;
+}
+
